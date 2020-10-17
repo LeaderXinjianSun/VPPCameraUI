@@ -4,11 +4,47 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:View="clr-namespace:VPPCameraUI.View"
         xmlns:local="clr-namespace:VPPCameraUI"
         mc:Ignorable="d"
         Title="{Binding Version,StringFormat=VPPCameraUI {0}}" Height="691" Width="1024" WindowStartupLocation ="CenterScreen" ResizeMode="CanResize"
-        Icon="copy_64px_1133600_easyicon.net.ico">
+        Icon="copy_64px_1133600_easyicon.net.ico" Closing="MetroWindow_Closing">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding AppLoadedEventCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu VerticalAlignment="Center">
+            <MenuItem Header="MIC1Ⅰ" Command="{Binding MenuActionCommand}" CommandParameter="0"></MenuItem>
+            <MenuItem Header="MIC1Ⅱ" Command="{Binding MenuActionCommand}" CommandParameter="1"></MenuItem>
+            <MenuItem Header="MIC4Ⅰ" Command="{Binding MenuActionCommand}" CommandParameter="2"></MenuItem>
+            <MenuItem Header="MIC4Ⅱ" Command="{Binding MenuActionCommand}" CommandParameter="3"></MenuItem>
+            <MenuItem Header="Bottom" Command="{Binding MenuActionCommand}" CommandParameter="4"></MenuItem>
+            <MenuItem Header="轴" Command="{Binding MenuActionCommand}" CommandParameter="6"></MenuItem>
+            <MenuItem Header="{Binding LoginMenuItemHeader}" Command="{Binding MenuActionCommand}" CommandParameter="5"></MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Row="1" VerticalAlignment="Stretch" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Margin="1" x:Name="MsgTextBox" IsReadOnly="True" TextChanged="MsgTextBox_TextChanged"  FontSize="14" Background="Black" FontFamily="宋体" Foreground="White" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Text="{Binding MessageStr}"></TextBox>
+            <Grid Grid.ColumnSpan="2">
+                <View:MIC1Page1 Visibility="{Binding MIC1Page1Visibility}"></View:MIC1Page1>
+                <View:AxisPage Visibility="{Binding AxisPageVisibility,FallbackValue=Collapsed}"></View:AxisPage>
+            </Grid>
+            
+        </Grid>
     </Grid>
 </Controls:MetroWindow>
