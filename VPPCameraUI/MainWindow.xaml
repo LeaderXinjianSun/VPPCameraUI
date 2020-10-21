@@ -40,8 +40,32 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <TextBox Grid.Row="1" VerticalAlignment="Stretch" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Margin="1" x:Name="MsgTextBox" IsReadOnly="True" TextChanged="MsgTextBox_TextChanged"  FontSize="14" Background="Black" FontFamily="宋体" Foreground="White" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Text="{Binding MessageStr}"></TextBox>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Style="{StaticResource MahApps.Styles.Button.Square.Accent}" Content="功能" FontSize="22" Command="{Binding FuncButtonCommand}" Margin="10"></Button>
+                <ToggleButton Grid.Row="1" Content="急停" IsChecked="{Binding EStopIsChecked}" Command="{Binding OperateButtonCommand}" FontSize="22" CommandParameter="0"
+                              Margin="10"
+                              Style="{DynamicResource MahApps.Styles.ToggleButton.Flat}">
+                </ToggleButton>
+                <ToggleButton Grid.Row="1" Grid.Column="1" Content="暂停" IsChecked="{Binding PauseIsChecked}" Command="{Binding OperateButtonCommand}" FontSize="22" CommandParameter="1"
+                              Margin="10"
+                              Style="{DynamicResource MahApps.Styles.ToggleButton.Flat}">
+                </ToggleButton>
+            </Grid>
             <Grid Grid.ColumnSpan="2">
                 <View:MIC1Page1 Visibility="{Binding MIC1Page1Visibility}"></View:MIC1Page1>
+                <View:MIC1Page2 Visibility="{Binding MIC1Page2Visibility,FallbackValue=Collapsed}"></View:MIC1Page2>
+                <View:MIC1Page3 Visibility="{Binding MIC1Page3Visibility,FallbackValue=Collapsed}"></View:MIC1Page3>
+                <View:MIC1Page4 Visibility="{Binding MIC1Page4Visibility,FallbackValue=Collapsed}"></View:MIC1Page4>
+                <View:BottomPage Visibility="{Binding BottomVisibility,FallbackValue=Collapsed}"></View:BottomPage>
                 <View:AxisPage Visibility="{Binding AxisPageVisibility,FallbackValue=Collapsed}"></View:AxisPage>
             </Grid>
             

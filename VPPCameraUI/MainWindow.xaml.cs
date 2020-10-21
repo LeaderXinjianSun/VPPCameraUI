@@ -38,6 +38,10 @@ namespace VPPCameraUI
         {
             e.Cancel = true;
             Global.MIC1_1ImageViewer.Visibility = Visibility.Collapsed;
+            Global.MIC1_2ImageViewer.Visibility = Visibility.Collapsed;
+            Global.MIC1_3ImageViewer.Visibility = Visibility.Collapsed;
+            Global.MIC1_4ImageViewer.Visibility = Visibility.Collapsed;
+            Global.BottomImageViewer.Visibility = Visibility.Collapsed;
             Metro metro = new Metro();
             metro.ChangeAccent("Dark.Red");
             bool r = await metro.ShowConfirm("确认", "你确定关闭软件吗?");

@@ -1,10 +1,10 @@
-﻿<UserControl x:Class="VPPCameraUI.View.MIC1Page1"
+﻿<UserControl x:Class="VPPCameraUI.View.MIC1Page3"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-             xmlns:halconviewer="clr-namespace:HalconViewer;assembly=HalconViewer"             
+             xmlns:halconviewer="clr-namespace:HalconViewer;assembly=HalconViewer"
              xmlns:local="clr-namespace:VPPCameraUI.View"
              mc:Ignorable="d" 
              d:DesignHeight="421" d:DesignWidth="1024">
@@ -13,7 +13,7 @@
             <ColumnDefinition Width="2*"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <halconviewer:ImageViewer Name="MIC1_1ImageViewer"  Visibility="{Binding HalconWindowVisibility}" Image="{Binding MIC1_1Iamge}" Repaint="{Binding MIC1_1Repaint}" AutoRepaint="True" ROIList="{Binding MIC1_1ROIList}" AppendHObject="{Binding MIC1_1AppendHObject}" GCStyle="{Binding MIC1_1GCStyle}" Margin="1"></halconviewer:ImageViewer>
+        <halconviewer:ImageViewer Name="MIC1_3ImageViewer"  Visibility="{Binding HalconWindowVisibility}" Image="{Binding MIC1_3Iamge}" Repaint="{Binding MIC1_3Repaint}" AutoRepaint="True" ROIList="{Binding MIC1_3ROIList}" AppendHObject="{Binding MIC1_3AppendHObject}" GCStyle="{Binding MIC1_3GCStyle}" Margin="1"></halconviewer:ImageViewer>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -29,7 +29,7 @@
             <Button Style="{StaticResource MahApps.Styles.Button.Square.Accent}" Margin="10">
                 <iconPacks:Entypo Width="40"
                                               Height="40"
-                                              Kind="WindowsStore" />
+                                              Kind="Evernote" />
             </Button>
         </Grid>
     </Grid>

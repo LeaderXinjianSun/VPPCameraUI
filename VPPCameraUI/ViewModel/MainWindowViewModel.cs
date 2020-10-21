@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.Prism.Commands;
+﻿using HalconDotNet;
+using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewROI;
 using VPPCameraUI.Model;
 
 namespace VPPCameraUI.ViewModel
@@ -234,6 +236,380 @@ namespace VPPCameraUI.ViewModel
                 this.RaisePropertyChanged("EndPos");
             }
         }
+        private string loginMenuItemHeader;
+
+        public string LoginMenuItemHeader
+        {
+            get { return loginMenuItemHeader; }
+            set
+            {
+                loginMenuItemHeader = value;
+                this.RaisePropertyChanged("LoginMenuItemHeader");
+            }
+        }
+        private bool isLogin;
+
+        public bool IsLogin
+        {
+            get { return isLogin; }
+            set
+            {
+                isLogin = value;
+                this.RaisePropertyChanged("IsLogin");
+            }
+        }
+        private string halconWindowVisibility;
+
+        public string HalconWindowVisibility
+        {
+            get { return halconWindowVisibility; }
+            set
+            {
+                halconWindowVisibility = value;
+                this.RaisePropertyChanged("HalconWindowVisibility");
+            }
+        }
+        private bool eStopIsChecked;
+
+        public bool EStopIsChecked
+        {
+            get { return eStopIsChecked; }
+            set
+            {
+                eStopIsChecked = value;
+                this.RaisePropertyChanged("EStopIsChecked");
+            }
+        }
+        private bool pauseIsChecked;
+
+        public bool PauseIsChecked
+        {
+            get { return pauseIsChecked; }
+            set
+            {
+                pauseIsChecked = value;
+                this.RaisePropertyChanged("PauseIsChecked");
+            }
+        }
+        private HImage mIC1_1Iamge;
+
+        public HImage MIC1_1Iamge
+        {
+            get { return mIC1_1Iamge; }
+            set
+            {
+                mIC1_1Iamge = value;
+                this.RaisePropertyChanged("MIC1_1Iamge");
+            }
+        }
+        private bool mIC1_1Repaint;
+
+        public bool MIC1_1Repaint
+        {
+            get { return mIC1_1Repaint; }
+            set
+            {
+                mIC1_1Repaint = value;
+                this.RaisePropertyChanged("MIC1_1Repaint");
+            }
+        }
+        private ObservableCollection<ROI> mIC1_1ROIList;
+
+        public ObservableCollection<ROI> MIC1_1ROIList
+        {
+            get { return mIC1_1ROIList; }
+            set
+            {
+                mIC1_1ROIList = value;
+                this.RaisePropertyChanged("MIC1_1ROIList");
+            }
+        }
+        private HObject mIC1_1AppendHObject;
+
+        public HObject MIC1_1AppendHObject
+        {
+            get { return mIC1_1AppendHObject; }
+            set
+            {
+                mIC1_1AppendHObject = value;
+                this.RaisePropertyChanged("MIC1_1AppendHObject");
+            }
+        }
+        private Tuple<string, object> mIC1_1GCStyle;
+
+        public Tuple<string, object> MIC1_1GCStyle
+        {
+            get { return mIC1_1GCStyle; }
+            set
+            {
+                mIC1_1GCStyle = value;
+                this.RaisePropertyChanged("MIC1_1GCStyle");
+            }
+        }
+        private HImage mIC1_2Iamge;
+
+        public HImage MIC1_2Iamge
+        {
+            get { return mIC1_2Iamge; }
+            set
+            {
+                mIC1_2Iamge = value;
+                this.RaisePropertyChanged("MIC1_2Iamge");
+            }
+        }
+        private bool mIC1_2Repaint;
+
+        public bool MIC1_2Repaint
+        {
+            get { return mIC1_2Repaint; }
+            set
+            {
+                mIC1_2Repaint = value;
+                this.RaisePropertyChanged("MIC1_2Repaint");
+            }
+        }
+        private ObservableCollection<ROI> mIC1_2ROIList;
+
+        public ObservableCollection<ROI> MIC1_2ROIList
+        {
+            get { return mIC1_2ROIList; }
+            set
+            {
+                mIC1_2ROIList = value;
+                this.RaisePropertyChanged("MIC1_2ROIList");
+            }
+        }
+        private HObject mIC1_2AppendHObject;
+
+        public HObject MIC1_2AppendHObject
+        {
+            get { return mIC1_2AppendHObject; }
+            set
+            {
+                mIC1_2AppendHObject = value;
+                this.RaisePropertyChanged("MIC1_2AppendHObject");
+            }
+        }
+        private Tuple<string, object> mIC1_2GCStyle;
+
+        public Tuple<string, object> MIC1_2GCStyle
+        {
+            get { return mIC1_2GCStyle; }
+            set
+            {
+                mIC1_2GCStyle = value;
+                this.RaisePropertyChanged("MIC1_2GCStyle");
+            }
+        }
+        private HImage mIC1_3Iamge;
+
+        public HImage MIC1_3Iamge
+        {
+            get { return mIC1_3Iamge; }
+            set
+            {
+                mIC1_3Iamge = value;
+                this.RaisePropertyChanged("MIC1_3Iamge");
+            }
+        }
+        private bool mIC1_3Repaint;
+
+        public bool MIC1_3Repaint
+        {
+            get { return mIC1_3Repaint; }
+            set
+            {
+                mIC1_3Repaint = value;
+                this.RaisePropertyChanged("MIC1_3Repaint");
+            }
+        }
+        private ObservableCollection<ROI> mIC1_3ROIList;
+
+        public ObservableCollection<ROI> MIC1_3ROIList
+        {
+            get { return mIC1_3ROIList; }
+            set
+            {
+                mIC1_3ROIList = value;
+                this.RaisePropertyChanged("MIC1_3ROIList");
+            }
+        }
+        private HObject mIC1_3AppendHObject;
+
+        public HObject MIC1_3AppendHObject
+        {
+            get { return mIC1_3AppendHObject; }
+            set
+            {
+                mIC1_3AppendHObject = value;
+                this.RaisePropertyChanged("MIC1_3AppendHObject");
+            }
+        }
+        private Tuple<string, object> mIC1_3GCStyle;
+
+        public Tuple<string, object> MIC1_3GCStyle
+        {
+            get { return mIC1_3GCStyle; }
+            set
+            {
+                mIC1_3GCStyle = value;
+                this.RaisePropertyChanged("MIC1_3GCStyle");
+            }
+        }
+        private HImage mIC1_4Iamge;
+
+        public HImage MIC1_4Iamge
+        {
+            get { return mIC1_4Iamge; }
+            set
+            {
+                mIC1_4Iamge = value;
+                this.RaisePropertyChanged("MIC1_4Iamge");
+            }
+        }
+        private bool mIC1_4Repaint;
+
+        public bool MIC1_4Repaint
+        {
+            get { return mIC1_4Repaint; }
+            set
+            {
+                mIC1_4Repaint = value;
+                this.RaisePropertyChanged("MIC1_4Repaint");
+            }
+        }
+        private ObservableCollection<ROI> mIC1_4ROIList;
+
+        public ObservableCollection<ROI> MIC1_4ROIList
+        {
+            get { return mIC1_4ROIList; }
+            set
+            {
+                mIC1_4ROIList = value;
+                this.RaisePropertyChanged("MIC1_4ROIList");
+            }
+        }
+        private HObject mIC1_4AppendHObject;
+
+        public HObject MIC1_4AppendHObject
+        {
+            get { return mIC1_4AppendHObject; }
+            set
+            {
+                mIC1_4AppendHObject = value;
+                this.RaisePropertyChanged("MIC1_4AppendHObject");
+            }
+        }
+        private Tuple<string, object> mIC1_4GCStyle;
+
+        public Tuple<string, object> MIC1_4GCStyle
+        {
+            get { return mIC1_4GCStyle; }
+            set
+            {
+                mIC1_4GCStyle = value;
+                this.RaisePropertyChanged("MIC1_4GCStyle");
+            }
+        }
+        private HImage bottomIamge;
+
+        public HImage BottomIamge
+        {
+            get { return bottomIamge; }
+            set
+            {
+                bottomIamge = value;
+                this.RaisePropertyChanged("BottomIamge");
+            }
+        }
+        private bool bottomRepaint;
+
+        public bool BottomRepaint
+        {
+            get { return bottomRepaint; }
+            set
+            {
+                bottomRepaint = value;
+                this.RaisePropertyChanged("BottomRepaint");
+            }
+        }
+        private ObservableCollection<ROI> bottomROIList;
+
+        public ObservableCollection<ROI> BottomROIList
+        {
+            get { return bottomROIList; }
+            set
+            {
+                bottomROIList = value;
+                this.RaisePropertyChanged("BottomROIList");
+            }
+        }
+        private HObject bottomAppendHObject;
+
+        public HObject BottomAppendHObject
+        {
+            get { return bottomAppendHObject; }
+            set
+            {
+                bottomAppendHObject = value;
+                this.RaisePropertyChanged("BottomAppendHObject");
+            }
+        }
+        private Tuple<string, object> bottomGCStyle;
+
+        public Tuple<string, object> BottomGCStyle
+        {
+            get { return bottomGCStyle; }
+            set
+            {
+                bottomGCStyle = value;
+                this.RaisePropertyChanged("BottomGCStyle");
+            }
+        }
+        private string mIC1Page2Visibility;
+
+        public string MIC1Page2Visibility
+        {
+            get { return mIC1Page2Visibility; }
+            set
+            {
+                mIC1Page2Visibility = value;
+                this.RaisePropertyChanged("MIC1Page2Visibility");
+            }
+        }
+        private string mIC1Page3Visibility;
+
+        public string MIC1Page3Visibility
+        {
+            get { return mIC1Page3Visibility; }
+            set
+            {
+                mIC1Page3Visibility = value;
+                this.RaisePropertyChanged("MIC1Page3Visibility");
+            }
+        }
+        private string mIC1Page4Visibility;
+
+        public string MIC1Page4Visibility
+        {
+            get { return mIC1Page4Visibility; }
+            set
+            {
+                mIC1Page4Visibility = value;
+                this.RaisePropertyChanged("MIC1Page4Visibility");
+            }
+        }
+        private string bottomVisibility;
+
+        public string BottomVisibility
+        {
+            get { return bottomVisibility; }
+            set
+            {
+                bottomVisibility = value;
+                this.RaisePropertyChanged("BottomVisibility");
+            }
+        }
 
 
         #endregion
@@ -249,6 +625,9 @@ namespace VPPCameraUI.ViewModel
         public DelegateCommand Axis_Home_YCommand { get; set; }
         public DelegateCommand<object> Axis_TechCommand { get; set; }
         public DelegateCommand<object> Axis_GOCommand { get; set; }
+        public DelegateCommand FuncButtonCommand { get; set; }
+        public DelegateCommand<object> OperateButtonCommand { get; set; }
+
         #endregion
         #region 变量
         private short sRtn;
@@ -289,6 +668,9 @@ namespace VPPCameraUI.ViewModel
         uint pClock;
         double _GPos, _CPos;
         bool PauseFlag = false, StopFlag = false, HomeStateY = false;
+        short stepnum = -1;
+        private Metro metro = new Metro();
+        CameraOperate mic1Cam = new CameraOperate();
         #endregion
         #region 构造函数
         public MainWindowViewModel()
@@ -296,7 +678,14 @@ namespace VPPCameraUI.ViewModel
             #region 初始化参数
             Version = "20201012";
             MessageStr = "";
+            LoginMenuItemHeader = "登录";
+            IsLogin = false;
+            HalconWindowVisibility = "Visible";
             MIC1Page1Visibility = "Visible"; AxisPageVisibility = "Collapsed";
+            MIC1Page2Visibility = "Visible";
+            MIC1Page3Visibility = "Visible";
+            MIC1Page4Visibility = "Visible";
+            BottomVisibility = "Visible";
             GTS800LimP = new ObservableCollection<bool>();
             GTS800LimN = new ObservableCollection<bool>();
             GTS800Home = new ObservableCollection<bool>();
@@ -333,7 +722,11 @@ namespace VPPCameraUI.ViewModel
             {
                 AddMessage(ex.Message);
             }
-
+            MIC1_1ROIList = new ObservableCollection<ROI>();
+            MIC1_2ROIList = new ObservableCollection<ROI>();
+            MIC1_3ROIList = new ObservableCollection<ROI>();
+            MIC1_4ROIList = new ObservableCollection<ROI>();
+            BottomROIList = new ObservableCollection<ROI>();
             #endregion
             #region 初始化轴卡
             int pValue;
@@ -370,6 +763,59 @@ namespace VPPCameraUI.ViewModel
             Axis_TechCommand = new DelegateCommand<object>(new Action<object>(this.Axis_TechCommandExecute));
             Axis_GOCommand = new DelegateCommand<object>(new Action<object>(this.Axis_GOCommandExecute));
             Axis_Home_YCommand = new DelegateCommand(new Action(this.Axis_Home_YCommandExecute));
+            FuncButtonCommand = new DelegateCommand(new Action(this.FuncButtonCommandExecute));
+            OperateButtonCommand = new DelegateCommand<object>(new Action<object>(this.OperateButtonCommandExecute));
+        }
+
+        private void OperateButtonCommandExecute(object obj)
+        {
+            switch (obj.ToString())
+            {
+                case "0":
+                    if (EStopIsChecked)
+                    {
+                        //急停按钮按下
+                        AddMessage("急停按钮按下");
+                        StopFlag = true;
+                    }
+                    else
+                    {
+                        //急停按钮抬起
+                        AddMessage("急停按钮抬起");
+                        StopFlag = false;
+                    }
+                    break;
+                case "1":
+                    if (PauseIsChecked)
+                    {
+                        //暂停按钮按下
+                        AddMessage("暂停按钮按下");
+                        PauseFlag = true;
+                    }
+                    else
+                    {
+                        //暂停按钮抬起
+                        AddMessage("暂停按钮抬起");
+                        PauseFlag = false;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void FuncButtonCommandExecute()
+        {
+            //AddMessage("待添加功能");
+            if (stepnum == -1 && HomeStateY && CPos < Cam1Pos)
+            {
+                stepnum = 1;
+            }
+            else
+            {
+                AddMessage("不在复位状态或未回原点");
+            }
+            //SRtn = gts.mc.GT_ComparePulse(0, 1, 0, 500);//输出脉冲，测试用
         }
 
         private void Axis_Home_YCommandExecute()
@@ -506,12 +952,9 @@ namespace VPPCameraUI.ViewModel
             }
         }
 
-        private async void Axis_Jog_Stop_YCommandExecute()
+        private void Axis_Jog_Stop_YCommandExecute()
         {
             SRtn = gts.mc.GT_Stop(0, 1 << (1 - 1), 1 << (1 - 1));
-            StopFlag = true;
-            await Task.Delay(100);
-            StopFlag = false;
         }
 
         private void Axis_Jog_N_MouseDown_YCommandExecute()
@@ -547,7 +990,32 @@ namespace VPPCameraUI.ViewModel
         private void AppLoadedEventCommandExecute()
         {
             AddMessage("软件加载完成");
-            Run();
+            #region 初始化相机
+            bool rst = mic1Cam.OpenCamera("cam1", "GigEVision");
+            //bool rst = mic1Cam.OpenCamera("[0] Integrated Camera", "DirectShow");
+            if (rst)
+            {
+                AddMessage("相机打开成功");
+                //rst = mic1Cam.GrabImage(0, false);
+                //if (rst)
+                //{
+                //    MIC1_1Iamge = mic1Cam.CurrentImage;
+                //    MIC1_2Iamge = mic1Cam.CurrentImage;
+                //    MIC1_3Iamge = mic1Cam.CurrentImage;
+                //    MIC1_4Iamge = mic1Cam.CurrentImage;
+                //    BottomIamge = mic1Cam.CurrentImage;
+                //}
+                Run();
+            }
+            else
+            {
+                AddMessage("相机打开失败");
+            }
+            #endregion
+            MIC1Page2Visibility = "Collapsed";
+            MIC1Page3Visibility = "Collapsed";
+            MIC1Page4Visibility = "Collapsed";
+            BottomVisibility = "Collapsed";
             UIRun();
         }
 
@@ -590,17 +1058,82 @@ namespace VPPCameraUI.ViewModel
             }
         }
 
-        private void MenuActionCommandExecute(object obj)
+        private async void MenuActionCommandExecute(object obj)
         {
             switch (obj.ToString())
             {
                 case "0":
                     MIC1Page1Visibility = "Visible";
+                    MIC1Page2Visibility = "Collapsed";
+                    MIC1Page3Visibility = "Collapsed";
+                    MIC1Page4Visibility = "Collapsed";
+                    BottomVisibility = "Collapsed";
                     AxisPageVisibility = "Collapsed";
+                    break;
+                case "1":
+                    MIC1Page1Visibility = "Collapsed";
+                    MIC1Page2Visibility = "Visible";
+                    MIC1Page3Visibility = "Collapsed";
+                    MIC1Page4Visibility = "Collapsed";
+                    BottomVisibility = "Collapsed";
+                    AxisPageVisibility = "Collapsed";
+                    break;
+                case "2":
+                    MIC1Page1Visibility = "Collapsed";
+                    MIC1Page2Visibility = "Collapsed";
+                    MIC1Page3Visibility = "Visible";
+                    MIC1Page4Visibility = "Collapsed";
+                    BottomVisibility = "Collapsed";
+                    AxisPageVisibility = "Collapsed";
+                    break;
+                case "3":
+                    MIC1Page1Visibility = "Collapsed";
+                    MIC1Page2Visibility = "Collapsed";
+                    MIC1Page3Visibility = "Collapsed";
+                    MIC1Page4Visibility = "Visible";
+                    BottomVisibility = "Collapsed";
+                    AxisPageVisibility = "Collapsed";
+                    break;
+                case "4":
+                    MIC1Page1Visibility = "Collapsed";
+                    MIC1Page2Visibility = "Collapsed";
+                    MIC1Page3Visibility = "Collapsed";
+                    MIC1Page4Visibility = "Collapsed";
+                    BottomVisibility = "Visible";
+                    AxisPageVisibility = "Collapsed";
+                    break;
+                case "5":
+                    if (IsLogin)
+                    {
+                        IsLogin = false;
+                        LoginMenuItemHeader = "登录";
+                        AddMessage("已登出");
+                    }
+                    else
+                    {
+                        metro.ChangeAccent("Dark.Red");
+                        HalconWindowVisibility = "Collapsed";
+                        var r = await metro.ShowLoginOnlyPassword("请登录");
+                        if (r == GetPassWord())
+                        {
+                            IsLogin = true;
+                            LoginMenuItemHeader = "登出";
+                        }
+                        else
+                        {
+                            AddMessage("密码错误");
+                        }
+                        HalconWindowVisibility = "Visible";
+                        metro.ChangeAccent("Light.Blue");
+                    }
                     break;
                 case "6":
                     MIC1Page1Visibility = "Collapsed";
                     AxisPageVisibility = "Visible";
+                    MIC1Page2Visibility = "Collapsed";
+                    MIC1Page3Visibility = "Collapsed";
+                    MIC1Page4Visibility = "Collapsed";
+                    BottomVisibility = "Collapsed";
                     break;
                 default:
                     break;
@@ -620,6 +1153,19 @@ namespace VPPCameraUI.ViewModel
                 MessageStr += "\n";
             }
             MessageStr += System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " " + str;
+        }
+        private string GetPassWord()
+        {
+            int day = System.DateTime.Now.Day;
+            int month = System.DateTime.Now.Month;
+            string ss = (day + month).ToString();
+            string passwordstr = "";
+            for (int i = 0; i < 4 - ss.Length; i++)
+            {
+                passwordstr += "0";
+            }
+            passwordstr += ss;
+            return passwordstr;
         }
         private async void Run()
         {
@@ -663,6 +1209,128 @@ namespace VPPCameraUI.ViewModel
                     CPos = Math.Round(_CPos / 100, 2);
 
                     #endregion
+                    #region 运行
+                    switch (stepnum)
+                    {
+                        case 1:
+                            if (!StopFlag)
+                            {
+                                if (!PauseFlag)
+                                {
+
+                                    ////gts.mc.GT_ComparePulse(0, 1, 0, 500);//输出脉冲，测试用
+                                    int[] pbuff1 = new int[20];
+                                    pbuff1[0] = (int)((Cam1Pos - StartPos) * 100);
+                                    pbuff1[1] = (int)((Cam2Pos - StartPos) * 100);
+                                    pbuff1[2] = (int)((Cam3Pos - StartPos) * 100);
+                                    pbuff1[3] = (int)((Cam4Pos - StartPos) * 100);
+                                    int[] pbuff2 = new int[20];
+                                    SRtn = gts.mc.GT_CompareData(0, 1, 0, 0, 0, 100, ref pbuff1[0], 4, ref pbuff2[0], 0);
+                                    TakePhoto();
+                                    stepnum = 2;
+                                }
+                            }
+                            else
+                            {
+                                stepnum = 99;
+                            }
+                            break;
+                        case 2:
+                            if (!StopFlag)
+                            {
+                                if (!PauseFlag)
+                                {
+                                    GTS800SVN[0] = true;
+                                    SRtn = gts.mc.GT_ClrSts(0, 1, 1);
+                                    SRtn = gts.mc.GT_AxisOn(0, 1);
+
+                                    AbsMotion(0, 1, (int)(EndPos * 100), MaxSpeed_Y * 0.1);
+                                    stepnum = 3;
+                                }
+                            }
+                            else
+                            {
+                                stepnum = 99;
+                            }
+                            break;
+                        case 3:
+                            if (!StopFlag)
+                            {
+                                if (PauseFlag)
+                                {
+                                    AxisStop(0, 1);
+                                    stepnum = 2;
+                                }
+                                else
+                                {
+                                    //short pStatus;
+                                    //int pCount;
+                                    //gts.mc.GT_CompareStatus(0,out pStatus,out pCount);
+                                    //Console.WriteLine("pStatus = {0},outputed hsio={1}\r", pStatus, pCount);
+                                    if (ZSPD(0, 1, (int)(EndPos * 100)))
+                                    {
+                                        stepnum = 4;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                stepnum = 99;
+                            }
+                            break;
+                        case 4:
+                            if (!StopFlag)
+                            {
+                                if (!PauseFlag)
+                                {
+                                    gts.mc.GT_CompareStop(0);
+                                    AbsMotion(0, 1, (int)(StartPos * 100), MaxSpeed_Y * 1);
+                                    stepnum = 5;
+                                }
+                            }
+                            else
+                            {
+                                stepnum = 99;
+                            }
+                            break;
+                        case 5:
+                            if (!StopFlag)
+                            {
+                                if (PauseFlag)
+                                {
+                                    AxisStop(0, 1);
+                                    stepnum = 4;
+                                }
+                                else
+                                {
+                                    if (ZSPD(0, 1, (int)(StartPos * 100)))
+                                    {
+                                        stepnum = -1;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                stepnum = 99;
+                            }
+                            break;
+                        case 99://急停
+                            gts.mc.GT_CompareStop(0);
+                            AxisStop(0, 1);
+                            SRtn = gts.mc.GT_AxisOff(0, 1);
+                            GTS800SVN[0] = false;
+                            stepnum = 100;
+                            break;
+                        case 100:
+                            if (!StopFlag)
+                            {
+                                stepnum = -1;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                    #endregion
                 }
                 catch (Exception ex)
                 {
@@ -697,6 +1365,67 @@ namespace VPPCameraUI.ViewModel
                 }
 
                 await Task.Delay(100);
+            }
+        }
+        private async void TakePhoto()
+        {
+            bool rst;
+            mic1Cam.GrabeImageStart();
+            if (!StopFlag)
+            {
+                rst = await Task.Run<bool>(() => { return mic1Cam.GrabeImageAsync(); }); 
+                if (rst)
+                {
+                    MIC1_1Iamge = mic1Cam.CurrentImage;
+                    AddMessage("位置1拍照完成");
+                }
+                else
+                {
+                    AddMessage("位置1拍照失败");
+                    return;
+                }
+            }
+            if (!StopFlag)
+            {
+                rst = await Task.Run<bool>(() => { return mic1Cam.GrabeImageAsync(); });
+                if (rst)
+                {
+                    MIC1_2Iamge = mic1Cam.CurrentImage;
+                    AddMessage("位置2拍照完成");
+                }
+                else
+                {
+                    AddMessage("位置2拍照失败");
+                    return;
+                }
+            }
+            if (!StopFlag)
+            {
+                rst = await Task.Run<bool>(() => { return mic1Cam.GrabeImageAsync(); });
+                if (rst)
+                {
+                    MIC1_3Iamge = mic1Cam.CurrentImage;
+                    AddMessage("位置3拍照完成");
+                }
+                else
+                {
+                    AddMessage("位置3拍照失败");
+                    return;
+                }
+            }
+            if (!StopFlag)
+            {
+                rst = await Task.Run<bool>(() => { return mic1Cam.GrabeImageAsync(); });
+                if (rst)
+                {
+                    MIC1_4Iamge = mic1Cam.CurrentImage;
+                    AddMessage("位置4拍照完成");
+                }
+                else
+                {
+                    AddMessage("位置4拍照失败");
+                    return;
+                }
             }
         }
         #region 回原点

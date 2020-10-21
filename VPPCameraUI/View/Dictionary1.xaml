@@ -154,4 +154,12 @@
             </DataTrigger>
         </Style.Triggers>
     </Style>
+    <Style TargetType="Grid" x:Key="GridLoginStatus">
+        <Setter Property="IsEnabled" Value="True"></Setter>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsLogin}" Value="False">
+                <Setter Property="IsEnabled" Value="False"></Setter>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>

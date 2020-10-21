@@ -11,7 +11,24 @@ namespace VPPCameraUI.Model
 
         public HImage CurrentImage { set; get; } = new HImage();
         public bool Connected { set; get; }
+        public void GrabeImageStart()
+        {
+            Framegrabber.GrabImageStart(-1);
 
+        }
+        public bool GrabeImageAsync()
+        {
+            try
+            {
+                CurrentImage = Framegrabber.GrabImageAsync(-1);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
         /// <summary>
         /// 打开相机
         /// </summary>
