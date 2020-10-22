@@ -815,7 +815,7 @@ namespace VPPCameraUI.ViewModel
             {
                 AddMessage("不在复位状态或未回原点");
             }
-            //SRtn = gts.mc.GT_ComparePulse(0, 1, 0, 500);//输出脉冲，测试用
+            //SRtn = gts.mc.GT_ComparePulse(0, 1, 0, 20000);//输出脉冲，测试用
         }
 
         private void Axis_Home_YCommandExecute()
@@ -1225,7 +1225,7 @@ namespace VPPCameraUI.ViewModel
                                     pbuff1[2] = (int)((Cam3Pos - StartPos) * 100);
                                     pbuff1[3] = (int)((Cam4Pos - StartPos) * 100);
                                     int[] pbuff2 = new int[20];
-                                    SRtn = gts.mc.GT_CompareData(0, 1, 0, 0, 0, 100, ref pbuff1[0], 4, ref pbuff2[0], 0);
+                                    SRtn = gts.mc.GT_CompareData(0, 1, 0, 0, 0, 50, ref pbuff1[0], 4, ref pbuff2[0], 0);
                                     TakePhoto();
                                     stepnum = 2;
                                 }
@@ -1244,7 +1244,7 @@ namespace VPPCameraUI.ViewModel
                                     SRtn = gts.mc.GT_ClrSts(0, 1, 1);
                                     SRtn = gts.mc.GT_AxisOn(0, 1);
 
-                                    AbsMotion(0, 1, (int)(EndPos * 100), MaxSpeed_Y * 0.1);
+                                    AbsMotion(0, 1, (int)(EndPos * 100), MaxSpeed_Y * 1);
                                     stepnum = 3;
                                 }
                             }
@@ -1499,8 +1499,8 @@ namespace VPPCameraUI.ViewModel
             double Vel_ASpeed = 0;
             gts.mc.GT_PrfTrap(aCardNum, aAxis); //设置指定轴为点位模式
             gts.mc.GT_GetTrapPrm(aCardNum, aAxis, out ATrapPrm); //读取点位模式运动参数
-            ATrapPrm.acc = 0.5;//点位运动的加速度。正数，单位：pulse/ms2。
-            ATrapPrm.dec = 0.5;//点位运动的减速度。正数，单位：pulse/ms2。
+            ATrapPrm.acc = 5;//点位运动的加速度。正数，单位：pulse/ms2。
+            ATrapPrm.dec = 5;//点位运动的减速度。正数，单位：pulse/ms2。
             ATrapPrm.smoothTime = (short)25;
 
             gts.mc.GT_SetTrapPrm(aCardNum, aAxis, ref ATrapPrm); //设置点位模式运动参数
